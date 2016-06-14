@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Leaf Rake",
+      "productCode": "GDN-0011",
+      "releaseDate": "2014-11-17T12:13:26 +05:00",
+      "description": "Leaf rake with 48-inch wooden handle.",
+      "price": 19.95,
+      "imageUrl": "http://www.paraide.com/Portals/0/CVStoreImages/13160_540.jpg"
+    },
+    {
+      "id": 2,
+      "productName": "Garden Cart4",
+      "productCode": "GDN-0023",
+      "releaseDate": "2015-11-17T12:13:26 +05:00",
+      "description": "15 gallon capacity rolling garden cart",
+      "price": 32.99,
+      "imageUrl": "http://img.diytrade.com/smimg/351131/2219910-752095-0/GC1813_Garden_Cart/7d50.jpg"
+    },
+    {
+      "id": 5,
+      "productName": "Hammer",
+      "productCode": "TBX-0048",
+      "releaseDate": "2013-11-17T12:13:26 +05:00",
+      "description": "Curved claw steel hammer",
+      "price": 8.99,
+      "imageUrl": "http://lghttp.18445.nexcesscdn.net/808F9E/mage/media/catalog/product/cache/1/thumbnail/550x/9df78eab33525d08d6e5fb8d27136e95/v/5/v508_hammer.jpg"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
