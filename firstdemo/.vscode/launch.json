@@ -1,0 +1,39 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch localhost/typescript with sourcemaps",
+			"type": "chrome",
+			"request": "launch",
+			"url": "http://localhost:8001/",
+			 "runtimeArgs": [
+            "--new-window", //Open in new window
+            "--user-data-dir=C:/dev/", //Can be any directory. Makes chrome load in a different directory so that it opens in a new instance.
+            "--remote-debugging-port=9222" //Open in port 9222 (standard chrome debug port)
+        	],
+			"sourceMaps": true,
+			"webRoot": "${workspaceRoot}/app"
+		},
+		{
+			"name": "Attach with sourcemaps",
+			"type": "chrome",
+			"request": "attach",
+			"port": 9222,
+			"sourceMaps": true,
+			"webRoot": "${workspaceRoot}"
+		},
+		{
+        "name": "Launch Debug mode without maps",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:8080/#/inicio",//Change to whatever you homepage is
+        "runtimeArgs": [
+            "--new-window", //Open in new window
+            "--user-data-dir=C:/dev/", //Can be any directory. Makes chrome load in a different directory so that it opens in a new instance.
+            "--remote-debugging-port=9222" //Open in port 9222 (standard chrome debug port)
+        ],
+        "webRoot": "${workspaceRoot}/app/", //The directory that contains js, ts and map files
+        "sourceMaps": true
+    }
+	]
+}

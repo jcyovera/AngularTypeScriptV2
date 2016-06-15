@@ -1,0 +1,19 @@
+{
+  "name": "firstdemo",
+  "version": "1.0.0",
+  "description": "Curso de Angular y TS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -a localhost -p 8001 -c-1"
+  },
+  "keywords": [
+    "Angular"
+  ],
+  "author": "Jc",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "http-server": "^0.9.0",
+    "jquery": "^2.2.3"
+  }
+}
