@@ -7,18 +7,24 @@ namespace moduleFirstDemo {
         toggleImage():void;
     }
     export class ProductListController implements IProductListController {
-        static $inject: Array<string> = ['DataProductService'];
+        static $inject: Array<string> = ['DataProductService','DataProductFactory'];
         title:string;
         products:moduleFirstDemo.domain.IProduct[];
         showImage:boolean;
 
-        constructor(private DataProductService: moduleFirstDemo.IDataProductService) {
+        constructor(private DataProductService: moduleFirstDemo.IDataProductService,
+        private DataProductFactory:moduleFirstDemo.IDataProductFactory) {
            this.title="Lista de productos"; 
            this.showImage=false;
            var productResource=DataProductService.getProductResource();
-           productResource.query((data:moduleFirstDemo.domain.IProduct[])=>{
+           /*productResource.query((data:moduleFirstDemo.domain.IProduct[])=>{
                this.products=data;
-           })
+           })*/
+           this.DataProductFactory.getProducts().then(
+               res=>{
+                   this.products=res;
+               }
+           );
            /*this.products=[
                 {
 					"productId": 1,

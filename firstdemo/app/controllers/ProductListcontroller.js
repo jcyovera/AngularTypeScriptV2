@@ -2,14 +2,18 @@ var moduleFirstDemo;
 (function (moduleFirstDemo) {
     'use strict';
     var ProductListController = (function () {
-        function ProductListController(DataProductService) {
+        function ProductListController(DataProductService, DataProductFactory) {
             var _this = this;
             this.DataProductService = DataProductService;
+            this.DataProductFactory = DataProductFactory;
             this.title = "Lista de productos";
             this.showImage = false;
             var productResource = DataProductService.getProductResource();
-            productResource.query(function (data) {
-                _this.products = data;
+            /*productResource.query((data:moduleFirstDemo.domain.IProduct[])=>{
+                this.products=data;
+            })*/
+            this.DataProductFactory.getProducts().then(function (res) {
+                _this.products = res;
             });
             /*this.products=[
                  {
@@ -44,7 +48,7 @@ var moduleFirstDemo;
         ProductListController.prototype.toggleImage = function () {
             this.showImage = !this.showImage;
         };
-        ProductListController.$inject = ['DataProductService'];
+        ProductListController.$inject = ['DataProductService', 'DataProductFactory'];
         return ProductListController;
     }());
     moduleFirstDemo.ProductListController = ProductListController;
