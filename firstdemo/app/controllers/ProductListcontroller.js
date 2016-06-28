@@ -8,12 +8,14 @@ var moduleFirstDemo;
             this.DataProductFactory = DataProductFactory;
             this.title = "Lista de productos";
             this.showImage = false;
-            var productResource = DataProductService.getProductResource();
+            this.showProgress = true;
+            //var productResource=DataProductService.getProductResource();
             /*productResource.query((data:moduleFirstDemo.domain.IProduct[])=>{
                 this.products=data;
             })*/
             this.DataProductFactory.getProducts().then(function (res) {
                 _this.products = res;
+                _this.showProgress = false;
             });
             /*this.products=[
                  {
