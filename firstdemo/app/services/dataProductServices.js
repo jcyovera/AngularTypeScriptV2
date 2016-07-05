@@ -16,4 +16,5 @@ var moduleFirstDemo;
         .module('demoModule')
         .service('DataProductService', DataProductService);
 })(moduleFirstDemo || (moduleFirstDemo = {}));
+
 //# sourceMappingURL=dataProductServices.js.map

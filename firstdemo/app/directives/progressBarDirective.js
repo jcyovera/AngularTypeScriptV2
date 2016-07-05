@@ -30,4 +30,5 @@ var moduleFirstDemo;
     angular.module('demoModule')
         .directive('progressBar', Progresbar.instance);
 })(moduleFirstDemo || (moduleFirstDemo = {}));
+
 //# sourceMappingURL=progressBarDirective.js.map

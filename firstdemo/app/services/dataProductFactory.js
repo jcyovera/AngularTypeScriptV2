@@ -22,4 +22,5 @@ var moduleFirstDemo;
         .module('demoModule')
         .factory('DataProductFactory', factory);
 })(moduleFirstDemo || (moduleFirstDemo = {}));
+
 //# sourceMappingURL=dataProductFactory.js.map

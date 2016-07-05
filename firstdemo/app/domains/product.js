@@ -17,4 +17,5 @@ var moduleFirstDemo;
         domain.Product = Product;
     })(domain = moduleFirstDemo.domain || (moduleFirstDemo.domain = {}));
 })(moduleFirstDemo || (moduleFirstDemo = {}));
+
 //# sourceMappingURL=product.js.map

@@ -58,4 +58,5 @@ var moduleFirstDemo;
         .module('demoModule')
         .controller('ProductListController', ProductListController);
 })(moduleFirstDemo || (moduleFirstDemo = {}));
+
 //# sourceMappingURL=ProductListcontroller.js.map
