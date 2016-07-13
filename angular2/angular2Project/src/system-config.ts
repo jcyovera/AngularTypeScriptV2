@@ -39,7 +39,11 @@ const barrels: string[] = [
   /** @cli-barrel */
 ];
 
-const cliSystemConfigPackages: any = {};
+const cliSystemConfigPackages: any = {
+  'moment': {defaultExtension: 'js', main:'moment'},
+  'ng2-bootstrap': {defaultExtension: 'js', main:'ng2-bootstrap'}
+
+};
 barrels.forEach((barrelName: string) => {
   cliSystemConfigPackages[barrelName] = { main: 'index' };
 });
@@ -52,7 +56,9 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
+    'moment': 'vendor/moment',
+    'ng2-bootstrap': 'vendor/ng2-bootstrap'
   },
   packages: cliSystemConfigPackages
 });

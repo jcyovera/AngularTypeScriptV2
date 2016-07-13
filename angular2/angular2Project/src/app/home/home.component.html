@@ -1,3 +1,24 @@
-<p>
-  home works!
-</p>
+<h2>
+  Products
+</h2>
+<ul class="products">
+  <li *ngFor="let product of products"
+    (click)="gotoDetail(product)">
+    <div class="header">
+      {{product.productName}}
+    </div>
+    <div class="body">
+      <div class="imageProduct">
+        <img
+        src="{{product.imageUrl}}"
+        style="width:100px;margin:2px;"
+        title="{{product.productName}}">
+      </div>
+      Price
+      <br />
+      <span>{{product.price}}</span>
+      <br>
+      <div class="description">{{product.description}}</div>
+    </div>
+  </li>
+</ul>
