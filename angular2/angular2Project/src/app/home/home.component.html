@@ -1,7 +1,7 @@
 <h2>
   Products
 </h2>
-<ul class="products">
+<!---<ul class="products">
   <li *ngFor="let product of products"
     (click)="gotoDetail(product)">
     <div class="header">
@@ -21,4 +21,26 @@
       <div class="description">{{product.description}}</div>
     </div>
   </li>
-</ul>
+</ul>-->
+<div class="row">
+<div class="col-lg-4 col-sm-12" *ngFor="let product of products">
+  <md-card > 
+    <md-card-title-group>
+        <img md-card-sm-image src="{{product.imageUrl}}">
+        <md-card-title>{{product.productName}}</md-card-title>
+        <md-card-subtitle>{{product.price}}</md-card-subtitle>
+    </md-card-title-group>
+    <md-card-content>
+      <div class="description">{{product.description}}</div>
+    </md-card-content>
+     <md-card-actions layout="row" layout-align="end center">
+          <button md-mini-fab >
+            <md-icon class="md-24" >mode_edit</md-icon>
+          </button>
+          <button md-mini-fab>
+            <md-icon class="md-24">delete</md-icon>
+          </button>
+      </md-card-actions>
+  </md-card>
+<div>
+</div>
